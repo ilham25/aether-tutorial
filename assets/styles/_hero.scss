@@ -1,0 +1,55 @@
+.hero {
+  min-height: 100vh;
+  min-width: 100vw;
+
+  display: flex;
+  position: relative;
+  .left {
+    width: 50vw;
+    height: 100vh;
+    .logo {
+      height: 10vh;
+      margin-left: 5vw;
+      display: flex;
+      align-items: center;
+      img {
+        height: 10vh;
+        object-fit: scale-down;
+      }
+    }
+  }
+  .right {
+    width: 50vw;
+    height: 100vh;
+    background: linear-gradient(120deg, $secondary, $primary);
+    .navbar {
+      margin-right: 5vw;
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .nav-links {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        list-style: none;
+        li {
+          margin-left: 2rem;
+          a {
+            color: #f9f9f9;
+          }
+        }
+      }
+    }
+  }
+  .screenshot {
+    height: 75vh;
+    object-fit: scale-down;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    @include bxShadow();
+    border-radius: 10px;
+  }
+}

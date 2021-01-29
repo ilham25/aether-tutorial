@@ -1,0 +1,11 @@
+@mixin bxShadow {
+  box-shadow: 0px 16px 40px 0px rgba(0, 0, 0, 0.15);
+}
+
+@mixin codeContainer {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  overflow: auto;
+  white-space: nowrap;
+  margin-bottom: 1rem;
+}

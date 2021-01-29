@@ -1,0 +1,13 @@
+.tutor-hero {
+  &.arch {
+    background-color: $blue;
+  }
+}
+.tutor-install {
+  .code-container {
+    &.arch {
+      color: $blue;
+      background-color: $lightBlue;
+    }
+  }
+}

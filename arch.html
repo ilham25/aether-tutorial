@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Arch Based Installation</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
+    <div class="tutor-hero arch">
+      <div class="left-content">
+        <img src="./assets/svg/arch.svg" alt="arch logo" />
+      </div>
+      <div class="right-content">
+        <h1>
+          Arch based dependencies<br />
+          installation
+        </h1>
+        <p>Manjaro, Archcraft, Archlabs, Artix, etc</p>
+      </div>
+    </div>
+    <div class="tutor-install">
+      <img src="./assets/svg/wave-arch.svg" alt="wave" class="wave" />
+      <div class="content">
+        <ol></ol>
+      </div>
+      <div class="dotfiles">
+        <header class="arch">
+          <h1>Dotfiles Installation</h1>
+        </header>
+        <div class="content arch">
+          <ol>
+          </ol>
+        </div>
+      </div>
+      <img src="./assets/svg/wave-arch2.svg" alt="wave" class="wave" />
+    </div>
+    <script src="./assets/js/app.js"></script>
+    <script>
+      const archData = [
+        {
+          name: "i3-Gaps Window Manager",
+          scripts: ["sudo pacman -S i3-gaps"],
+        },
+        {
+          name: "Audio",
+          scripts: ["sudo pacman -S alsa-utils pulseaudio pulseaudio-alsa"],
+        },
+        {
+          name: "Brightness",
+          scripts: ["yay -S brightnessctl"],
+        },
+        {
+          name: "Network & CPU Monitor, RAM Usage",
+          scripts: ["yay -S psuinfo"],
+        },
+        {
+          name: "Wireless Tools",
+          scripts: ["sudo pacman -S wireless_tools"],
+        },
+        {
+          name:
+            "Other utility (panel, notification, terminal, file manager, etc)",
+          scripts: [
+            "yay -S dunst tint2 gsimplecal rofi feh lxappearance qt5ct qt5-styleplugins lxsession xautolock rxvt-unicode-patched xclip scrot thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler w3m geany nano vim viewnior pavucontrol parcellite neofetch htop picom-ibhagwan-git gtk2-perl xfce4-power-manager zsh zsh-completions imagemagick playerctl networkmanager-dmenu",
+          ],
+        },
+        {
+          name: "oh-my-zsh & plugins",
+          scripts: [
+            "chsh -s /usr/bin/zsh # Change default shell to zsh for current user",
+            'sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"',
+            "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting",
+            "git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions",
+          ],
+        },
+      ];
+
+      tutorList(orderedList, "arch", archData);
+      tutorList(dotfilesList, "arch", dotfilesData);
+
+    </script>
+  </body>
+</html>

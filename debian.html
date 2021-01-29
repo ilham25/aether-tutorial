@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Debian Based Installation</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
+    <div class="tutor-hero debian">
+      <div class="left-content debian">
+        <img src="./assets/svg/debian.svg" alt="debian logo" />
+      </div>
+      <div class="right-content">
+        <h1>
+          Debian based dependencies<br />
+          installation
+        </h1>
+        <p>Ubuntu, Elementary, KDE Neon, etc</p>
+      </div>
+    </div>
+    <div class="tutor-install">
+      <img src="./assets/svg/wave-debian.svg" alt="wave" class="wave" />
+      <div class="content">
+        <ol></ol>
+      </div>
+      <div class="dotfiles">
+        <header class="debian">
+          <h1>Dotfiles Installation</h1>
+        </header>
+        <div class="content debian">
+          <ol>
+          </ol>
+        </div>
+      </div>
+      <img src="./assets/svg/wave-debian2.svg" alt="wave" class="wave" />
+    </div>
+    <script src="./assets/js/app.js"></script>
+    <script>
+      const debianData = [
+        {
+          name: "i3-Gaps Window Manager",
+          scripts: [
+            "sudo add-apt-repository ppa:kgilmer/speed-ricer",
+            "sudo apt-get update",
+            "sudo apt-get install i3-gaps-wm i3-gaps-session",
+          ],
+        },
+        {
+          name: "Other Dependencies",
+          scripts: [
+            "sudo apt install feh git rsync python psmisc wireless-tools alsa-utils brightnessctl nitrogen dunst tint2 gsimplecal rofi lxappearance qt5ct qt5-style-plugins lxpolkit xautolock rxvt-unicode xclip scrot thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman ffmpegthumbnailer tumbler w3m w3m-img geany viewnior mpv mpd mpc ncmpcpp pavucontrol parcellite neofetch htop imagemagick ffmpeg playerctl xsettingsd",
+          ],
+        },
+        {
+          name: "oh-my-zsh & plugins",
+          scripts: [
+            "sudo apt install zsh",
+            "chsh -s `which zsh` # Change default shell to zsh for current user",
+            'sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"',
+            "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting",
+            "git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions",
+          ],
+        },
+        {
+          name: "Picom",
+          scripts: [
+            "sudo apt install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev  libpcre2-dev  libevdev-dev uthash-dev libev-dev libx11-xcb-dev ninja-build meson",
+            "git clone https://github.com/yshui/picom.git && cd picom/",
+            "git submodule update --init --recursive",
+            "meson --buildtype=release . build",
+            "ninja -C build",
+            "ninja -C build install",
+          ],
+        },
+        {
+          name: "psuinfo - Network & CPU Monitor, RAM Usage",
+          scripts: [
+            "git clone https://github.com/nwg-piotr/psuinfo.git && cd psuinfo/",
+            "sudo cp -r {psuinfo,icons} /usr/bin",
+          ],
+        },
+      ];
+      tutorList(orderedList, "debian", debianData);
+      tutorList(dotfilesList, "debian", dotfilesData);
+    </script>
+  </body>
+</html>

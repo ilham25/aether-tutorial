@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* a {
+  text-decoration: none;
+}
+
+* code {
+  font-family: "Share Tech Mono", monospace;
+}
+
+body {
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+}
+
+.hero {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.hero .left {
+  width: 50vw;
+  height: 100vh;
+}
+
+.hero .left .logo {
+  height: 10vh;
+  margin-left: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .left .logo img {
+  height: 10vh;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.hero .right {
+  width: 50vw;
+  height: 100vh;
+  background: linear-gradient(120deg, #df2dee, #ef5093);
+}
+
+.hero .right .navbar {
+  margin-right: 5vw;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.hero .right .navbar .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.hero .right .navbar .nav-links li {
+  margin-left: 2rem;
+}
+
+.hero .right .navbar .nav-links li a {
+  color: #f9f9f9;
+}
+
+.hero .screenshot {
+  height: 75vh;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-shadow: 0px 16px 40px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 16px 40px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.wave {
+  width: 100vw;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.tutor-hero {
+  height: 100vh;
+  width: 100vw;
+  padding: 0 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tutor-hero .left-content {
+  height: 100vh;
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tutor-hero .left-content img {
+  width: 30vw;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.tutor-hero .right-content {
+  height: 100vh;
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: end;
+}
+
+.tutor-hero .right-content h1 {
+  font-weight: 500;
+  font-size: 3rem;
+  color: #f9f9f9;
+}
+
+.tutor-hero .right-content p {
+  margin-top: 2rem;
+  color: #f9f9f9;
+}
+
+.tutor-install {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.tutor-install .content {
+  width: 100vw;
+  padding: 5vw;
+}
+
+.tutor-install .content ol {
+  display: block;
+}
+
+.tutor-install .content ol li {
+  font-weight: 500;
+  color: #6d15cd;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+
+.tutor-install .content ol .code-container {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  overflow: auto;
+  white-space: nowrap;
+  margin-bottom: 1rem;
+}
+
+.tutor-hero.arch {
+  background-color: #2da8d9;
+}
+
+.tutor-install .code-container.arch {
+  color: #2da8d9;
+  background-color: #ddf5ff;
+}
+
+.tutor-hero .left-content.debian img {
+  width: 20vw;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.tutor-hero.debian {
+  background-color: #ef5093;
+}
+
+.tutor-install .code-container.debian {
+  color: #ef5093;
+  background-color: #ffe2f1;
+}
+
+.dotfiles header {
+  width: 100vw;
+  height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dotfiles header h1 {
+  font-weight: 500;
+  color: #f9f9f9;
+}
+
+.dotfiles header.debian {
+  background-color: #ef5093;
+}
+
+.dotfiles header.arch {
+  background-color: #2da8d9;
+}
+
+.dotfiles .content {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0 5vw;
+}
+
+.dotfiles .content ol {
+  display: block;
+}
+
+.dotfiles .content ol li {
+  font-weight: 500;
+  color: #6d15cd;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+
+.dotfiles .content ol .code-container {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  overflow: auto;
+  white-space: nowrap;
+  margin-bottom: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

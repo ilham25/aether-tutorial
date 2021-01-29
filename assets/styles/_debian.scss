@@ -1,0 +1,21 @@
+.tutor-hero {
+  .left-content {
+    &.debian {
+      img {
+        width: 20vw;
+        object-fit: scale-down;
+      }
+    }
+  }
+  &.debian {
+    background-color: $primary;
+  }
+}
+.tutor-install {
+  .code-container {
+    &.debian {
+      color: $primary;
+      background-color: $lightPink;
+    }
+  }
+}
